@@ -258,9 +258,11 @@ preprocessor = Pipeline(steps=[
 	("selector", selector)
 ])
 
-# read the training data
-train = pd.read_csv("/Users/harsimranjitsingh/Desktop/Projects/data/train.csv")
+# dir_path = r'/Users/harsimranjitsingh/Desktop/Projects/data'
 
+# read the training data
+# train = pd.read_csv(os.path.join(dir_path, "train.csv"))
+train = pd.read_csv("train.csv")
 X_train = train.drop(columns="price")
 y_train = train.price.copy()
 
